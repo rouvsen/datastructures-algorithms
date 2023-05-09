@@ -1,4 +1,4 @@
-package org.example.stack;
+package org.example.ds.stack;
 
 public class MyStack<T> {
 
