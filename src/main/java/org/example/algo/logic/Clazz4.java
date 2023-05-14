@@ -1,4 +1,4 @@
-package org.example.algo.chapter1;
+package org.example.algo.logic;
 
 import java.util.*;
 
