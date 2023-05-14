@@ -4,25 +4,23 @@ import java.util.Arrays;
 
 public class BubbleSort {
     public static void main(String[] args) {
-
-        int[] nums = {1,3,2,6,11,5};
-        int[] ints = bubbleSort(nums);
-        System.out.println(Arrays.toString(ints));
-
+        int[] sortedArr = bubbleSort(new int[]{3, 1, 4, 2, 7, -2});
+        System.out.println(Arrays.toString(sortedArr));
     }
-
-    public static int[] bubbleSort(int[] arr){
-        int[] array = arr;
-        int temp = 0;
-        for (int i = 0; i < array.length; i++) {
-            for (int j = 0; j < array.length-1; j++) {
-                if (array[j] > array[j+1]){
-                    temp = array[j];
-                    array[j] = array[j+1];
-                    array[j+1] = temp;
+    public static int[] bubbleSort(int[] arr) {//bubble?
+        //logic here
+        int temp;
+        for (int key = 0; key < arr.length-1; key++) {
+            for (int nextVal = key+1; nextVal < arr.length; nextVal++) {
+                if (arr[nextVal] < arr[key]) {
+                    //swapping
+                    temp = arr[key];
+                    arr[key] = arr[nextVal];
+                    arr[nextVal] = temp;
                 }
             }
+            //i=key, j=nextVal
         }
-        return array;
+        return arr;
     }
 }
