@@ -12,7 +12,7 @@ public class InsertionSort {
         //logic here
         for (int i = 1; i < arr.length; i++) {
             int key = arr[i];//2nd arg
-            int j = key - 1;//first index
+            int j = i - 1;//first index
             while (j >= 0 && arr[j] > key) {
                 arr[j + 1] = arr[j];
                 j = j - 1;//j--;
