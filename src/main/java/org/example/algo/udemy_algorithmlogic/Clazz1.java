@@ -9,7 +9,8 @@ public class Clazz1 {
 //        findFactorialSimpleV1(5);
 //        System.out.println(findFactorialSimpleV2(5));
 //        findFactorialForGivenNumbersButTheirsAmong(5, 10);
-        sumAndAverage();
+//        sumAndAverage();
+        primeNumbersFinder(5, 10);
     }
 
     public static void squareOfNumbersBetweenXandY(int num1, int num2) {
@@ -68,6 +69,26 @@ public class Clazz1 {
         average = sum / howMany;
         System.out.println("sum: " + sum);
         System.out.println("average: " + average);
+    }
+
+    public static void primeNumbersFinder(int start, int end) {
+        for (int number = start; number <= end; number++) {
+            if (isPrime(number)) {
+                System.out.println(number);
+            }
+        }
+    }
+
+    private static boolean isPrime(int num) {
+        if (num < 2) {
+            return false;
+        }
+        for (int i = 2; i <= Math.sqrt(num); i++) {
+            if (num % i == 0) {
+                return false;
+            }
+        }
+        return true;
     }
 
 
