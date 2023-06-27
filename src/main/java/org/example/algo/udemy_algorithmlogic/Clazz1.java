@@ -4,7 +4,8 @@ public class Clazz1 {
 
     public static void main(String[] args) {
 //        squareOfNumbersBetweenXandY(5, 10);//all are inclusive
-        findFactorialSimpleV1(5);
+//        findFactorialSimpleV1(5);
+        System.out.println(findFactorialSimpleV2(5));
     }
 
     public static void squareOfNumbersBetweenXandY(int num1, int num2) {
@@ -24,6 +25,12 @@ public class Clazz1 {
             counter *= num--;
         }
         System.out.println("factorial of " + number + " is " + counter);
+    }
+
+    public static int findFactorialSimpleV2(int num) {
+        if(num == 0)
+            return 1;
+        return num * findFactorialSimpleV2(num - 1);
     }
 
 }
