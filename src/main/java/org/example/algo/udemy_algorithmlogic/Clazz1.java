@@ -1,12 +1,15 @@
 package org.example.algo.udemy_algorithmlogic;
 
+import java.util.Scanner;
+
 public class Clazz1 {
 
     public static void main(String[] args) {
 //        squareOfNumbersBetweenXandY(5, 10);//all are inclusive
 //        findFactorialSimpleV1(5);
 //        System.out.println(findFactorialSimpleV2(5));
-        findFactorialForGivenNumbersButTheirsAmong(5, 10);
+//        findFactorialForGivenNumbersButTheirsAmong(5, 10);
+        sumAndAverage();
     }
 
     public static void squareOfNumbersBetweenXandY(int num1, int num2) {
@@ -50,5 +53,22 @@ public class Clazz1 {
         }
 
     }
+
+    public static void sumAndAverage() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("how many num? ");
+        int howMany = scanner.nextInt();
+        int sum = 0;
+        int average;
+        for (int i = 0; i < howMany; i++) {
+            System.out.print(i + 1 + " num is: ");
+            int num = scanner.nextInt();
+            sum+=num;
+        }
+        average = sum / howMany;
+        System.out.println("sum: " + sum);
+        System.out.println("average: " + average);
+    }
+
 
 }
